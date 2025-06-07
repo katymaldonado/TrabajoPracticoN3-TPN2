@@ -1,0 +1,23 @@
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    border: 1px solid lightgray;
+    padding: 40px;
+    border-radius: 10px;
+}
+section > div{
+    width: 100%;
+}
+h2{
+    text-align: center;
+}
+form div{
+  margin: 4%;
+}
+.card{
+    margin: 2%;
+    width: 40%;
+}

@@ -1,0 +1,51 @@
+<section>
+    <div>
+        <h2>Formulario</h2>
+    </div>
+    <div>
+        <form novalidate @submit.prevent="enviar()">
+            <!-- campo nombre -->
+            <div class="form-group">
+                <label for="nombre">Nombre: </label>
+                <input id="nombre" class="form-control" type="text" v-model.trim="formData.nombre"
+                    @input="formDirty.nombre=true" />
+                <div v-if="errorNombre.mostrar" class="alert alert-danger my-1">
+                    {{ errorNombre.mensaje}}
+                </div>
+            </div>
+
+            <!-- campo edad -->
+            <div class="form-group">
+                <label for="edad">Edad: </label>
+                <input id="edad" class="form-control" type="number" v-model.number="formData.edad"
+                    @input="formDirty.edad=true" />
+                <div v-if="errorEdad.mostrar" class="alert alert-danger my-1">
+                    {{ errorEdad.mensaje}}
+                </div>
+            </div>
+
+            <!-- campo Email -->
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input id="email" class="form-control" type="email" v-model.trim="formData.email"
+                    @input="formDirty.email=true" />
+                <div v-if="errorEmail.mostrar" class="alert alert-danger my-1">
+                    {{ errorEmail.mensaje}}
+                </div>
+            </div>
+
+            <!--  ------- botón de envío -------- -->
+            <button class="btn btn-success my-3" :disabled="validarBotonEnvio()">Enviar</button>
+
+        </form>
+    </div>
+
+</section>
+
+<div class="card">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Nombre: {{formData.nombre}}</li>
+            <li class="list-group-item">Edad: {{formData.edad}}</li>
+            <li class="list-group-item">E-mail: {{formData.email}}</li>
+        </ul>
+</div>
