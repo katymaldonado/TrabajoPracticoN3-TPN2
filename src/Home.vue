@@ -16,7 +16,7 @@
 
             <div>
                 <h5>Materia:</h5>
-            <p>Taller de Nuevas Tecnologias 2</p>
+            <p>Programacion de Nuevas Tecnologias 2</p>
             </div>
 
         </div>
